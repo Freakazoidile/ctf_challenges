@@ -1,7 +1,7 @@
 # Tracking Progress and Write-ups for https://www.hackthis.co.uk
 
 
-## Challenge status: 
+## Completed Challenges:
 * Preg_replace() PHP function
 * Backup files
 * HTTP headers

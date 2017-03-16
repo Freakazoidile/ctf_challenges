@@ -1,8 +1,7 @@
 # Tracking Progress and Write-ups for https://www.hackthis.co.uk
 
 
-## Challenges Completed: 
-
+## Completed Challenges: 
 * Completed Coding 1 · March 7, 2017
 * Completed Crypt 1 · March 7, 2017
 * Completed Intermediate 4 · March 7, 2017
