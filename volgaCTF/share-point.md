@@ -56,7 +56,7 @@ I then added the parameter (again from the code above) `?cmd=` to the end to ver
 
 Success!!!!!!
 
-`http://share-point.quals.2017.volgactf.ru/files/AAAA/kek.php.png?cmd=ls+-al'
+`http://share-point.quals.2017.volgactf.ru/files/AAAA/kek.php.png?cmd=ls+-al`
 
 Works!
 
