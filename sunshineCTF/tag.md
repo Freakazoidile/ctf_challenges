@@ -1,7 +1,7 @@
 <h2>Challenge</h2>
 <b>You are surrounded by zombies on all sides. Blood and flesh that drip from their mouths. You run for cover in an abandoned building. As you huddle in terror under a delapitated desk your foot brushes against a small package. What could be inside???</b>
 
-Download file: Tag.gz
+Download file: [Tag.gz](tag.gz)
 
 
 <h2>Process</h2>
