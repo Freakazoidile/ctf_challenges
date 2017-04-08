@@ -20,7 +20,7 @@ Gotcha, not a gz, to Wireshark.
 <b>Step 2.</b>
 After quickling scanning through, it's mostly HTTP traffic, I see 2 images files and a flag.7z. Using File > Export Objects > HTTP to extract the files.
 
-![Wireshark HTTP Traffic](images/wire_1)
+![Wireshark HTTP Traffic](wire_1.png)
 
 Files Extracted:
 * flag.7z
@@ -47,7 +47,8 @@ mNDg2NTIwNzc2MTZjNmI2NTY0MjA2Zjc1NzQyMDY5NmUyMDc0Njg2NTIwNjc3MjYxNzkyMDZjNjk2NzY
 
 The last output of strings was the above block of characters. This looks like base64.  I put it into a file and `base64 -d file`, no luck. Didnt work. I decided to find this data in Wireshark. It was in Packet 313, which interestingly was TCP with flags PSH and ACK set. When viewing the data in the packet everything after the starting `m` of my potential base64 string was highlighted. Loooking at the packet at more detail, the `m` was part of the `SEQ/ACK Analysis` and NOT the Data portion of the packet. I remove the `m` it decoded successfully.
 
-![Wireshark Base64 data](images/wire_2)
+
+![Wireshark Base64 Data](wire_2.png)
 
 
 <b>Step 5.</b>
