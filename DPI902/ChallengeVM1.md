@@ -4,7 +4,7 @@
 **Challenge Machine IP**: 172.16.11.45
 
 
-## Reconnaissance and Mapping
+## Solution
 I started with a Syn scan of all TCP ports against the target machine to identify open ports. 
 `nmap -sS -p- 172.16.11.45` which discovered ports `2222 , 31336` were open. I feed these ports into a Nmap Service scan to determine the services running on the ports. As suspected SSH was running on port 2222. Port 31336 was running Apache web server.
 
