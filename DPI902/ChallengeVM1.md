@@ -37,3 +37,7 @@ The **id_rsa.pub** file existed! I tried to use the key to ssh to the server on 
 I SSH using with the credentials successfully. In Zerocool's home directory was a file aptly named `flag.txt`, the contents were:
 `DPI902{HackThePlanet}`
 
+![alt text](https://raw.githubusercontent.com/Freakazoidile/ctf_challenges/master/DPI902/screenshot.png "Challenge VM1 Proof")
+
+
+
