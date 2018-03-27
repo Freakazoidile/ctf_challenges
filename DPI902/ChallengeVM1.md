@@ -27,11 +27,10 @@ OS details: Linux 3.2 - 4.8
 
 Navigating to `http://172.16.11.45:31336` in a web browser revealed the Apache default index.html. After looking at the source code I discovered a comment that `users in /sekret_users`, loading this directory revealed an image from the movie Hackers and the following text: "I use key based authentication so no one can hack me." This claim, paired with SSH likely means there is a SSH key to retrieve. I tried to log into SSH as user **acidburn** but it failed due to a key error. 
 
-I ran the directory brute force tool `dirb` on `http://172.16.11.45:31336/sekret_users` and discovered the `.ssh` directory. Based on common SSH key names I tried:
-
-	* http://172.16.11.45:31336/sekret_users/.ssh/id_rsa
-	* http://172.16.11.45:31336/sekret_users/.ssh/id_rsa.pub
-	* http://172.16.11.45:31336/sekret_users/.ssh/known_hosts
+I ran the directory brute force tool `dirb` on `http://172.16.11.45:31336/sekret_users` and discovered the `.ssh` directory. Based on common SSH key names I tried
+* http://172.16.11.45:31336/sekret_users/.ssh/id_rsa
+* http://172.16.11.45:31336/sekret_users/.ssh/id_rsa.pub
+* http://172.16.11.45:31336/sekret_users/.ssh/known_hosts
 
 The **id_rsa.pub** file existed! I tried to use the key to ssh to the server on port 2222 `ssh -i zerocool_id_rsa.pub -P 2222 zerocool@172.16.11.45` however it required a password to use the key.  I used `ssh2john` to format the SSH key so that the the password cracking tool `john` could understand the key and attmept to crack the password. Using the wordlist `rockyou.txt` the password associated with the key was `acidburn`. 
 
